@@ -25,6 +25,8 @@ If there are plots in some exercises, **do not** include them in the submission;
 
 Out of all lab assignments, two of them will be randomly selected for grading, each providing up to 2/20 points.
 
+If you do not follow the e-mail subject format in at least one of your submissions, you will lose a point (-1/20).
+
 ## End-of-session mini-exams
 At the end of weeks 4, 5, 6, 7, there will be mini-exams of 20-25 minutes, giving 4/20 points each. Three types of exercises that might appear on these mini-exams are:
 
