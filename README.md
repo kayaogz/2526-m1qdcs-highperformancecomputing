@@ -6,7 +6,9 @@ This is an introductory course on the basics of high performance and parallel co
 
 We will have seven sessions of 3 hours each (plus mini-exam, c.f. below). The first session is an introduction to high performance computing. The rest will be a mix of course (around 1h-1h30) and lab session (around 1h30-2h) on that subject. You might not be able to finish all exercises during the lab session (which is completely normal); you should make sure that you can understand and finish all basic exercises (first two or three) during the session so that you feel more confident to finish the rest on your own.
 
-Please bring your laptop to the course; you will be using it during the lab sessions.
+You need to add your information to the course grade sheet by the end of the second session of the course: https://cirrus.universite-paris-saclay.fr/s/d4RfH47dTn2yYoF . Afterwards, you will not be able to see or edit the file. This is the mailing list I will use for course announcements.
+
+Please also bring your laptop to the course; you will be using it during the lab sessions.
 
 ## Session 1: Introduction to high performance computing
 ## Session 2: Introduction to multithreaded parallelism using OpenMP
