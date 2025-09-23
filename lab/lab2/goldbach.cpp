@@ -44,7 +44,7 @@ int main()
     if (numPairs[i] == 0) { goldbachVrai = 0; }
   }
   if (goldbachVrai) { std::cout << "La conjecture de Goldbach est vrai" << std::endl; }
-  else { std::cout << "La conjecture de Goldbach est vrai" << std::endl; }
+  else { std::cout << "La conjecture de Goldbach est faux" << std::endl; }
   std::chrono::duration<double> tempsSeq = std::chrono::high_resolution_clock::now() - start;
   std::cout << "Temps sequentiel: " << tempsSeq.count() << "s\n";
 
