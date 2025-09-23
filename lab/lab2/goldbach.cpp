@@ -49,7 +49,7 @@ int main()
   std::cout << "Temps sequentiel: " << tempsSeq.count() << "s\n";
 
   // Parallelisation sans preciser l'ordonnancement.
-  auto start = std::chrono::high_resolution_clock::now();
+  start = std::chrono::high_resolution_clock::now();
   // A FAIRE ...
   std::chrono::duration<double> temps = std::chrono::high_resolution_clock::now() - start;
   std::cout << "Temps ordonnancement par defaut: " << temps.count() << "s\n";
