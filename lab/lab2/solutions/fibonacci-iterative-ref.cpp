@@ -49,7 +49,7 @@ int main(int argc, char **argv)
       // donc ceci peut etre partage (shared(fib)) parmi les taches. i est la variable de boucle qui evolue; donc on a
       // besoin de creer une copie a part de la valeur actuelle de i pour la tache actuelle, en utilisant
       // firstprivate(i)
-#pragma omp task shared(fib) firstprivate(i) depend(in:fib[i - 1], fib[i - 2]) depend(out:fib[i])
+#pragma omp task shared(fib) default(none) firstprivate(i) depend(in:fib[i - 1], fib[i - 2]) depend(out:fib[i])
       {
         fib[i] = fib[i - 1] + fib[i - 2];
       }

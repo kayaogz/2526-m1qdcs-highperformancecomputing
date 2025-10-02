@@ -1,7 +1,7 @@
 #include <iostream>
 #include "omp.h"
 
-int globalx;
+int globalx = 3;
 #pragma omp threadprivate(globalx)
 
 int main()

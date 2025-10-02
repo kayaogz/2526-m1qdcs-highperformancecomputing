@@ -13,7 +13,7 @@ int fib(int n)
   // Creer une tache pour calculer fib(n - 2). La tache a besoin d'un acces partage pour x du thread parent (shared(x))
   // afin de pouvoir rendre le resultat. Si n est tres petit, ne pas creer une tache (histoire d'eviter le surcout de
   // creation de tache)
-#pragma omp task shared(x) if(n > 14)
+#pragma omp task default(none) shared(x) if(n > 14)
   x = fib(n - 2);
 
   // Here, we can create a task for fib(n - 1). However, since the parent thread will only wait afterwards, it would be
