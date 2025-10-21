@@ -79,21 +79,6 @@ extern "C" void dgemm_(
   double *C,
   int *ldc);
 
-// Symmetric matrix-matrix multiplication. A itself does not have to be symmetric
-// Produit matrice-matrice symmetrique. A elle-meme n'a pas a etre symmetrique
-// C = alpha A A^T + beta C, C = alpha A^T A + beta C
-extern "C" void dsyrk_(
-  char *uplo,
-  char *trans,
-  int *n,
-  int *k,
-  double *alpha,
-  double *A,
-  int *lda,
-  double *beta,
-  double *C,
-  int *ldc);
-
 // Cholesky factorization L L^T = A or U UˆT = A (LAPACK). A is overwritten by L or L^T
 // Once computed, you can solve A x = b as follows:
 // Factorisation Cholesky L L^T = A or U UˆT = A (LAPACK). A est surecrit par L ou L^T
@@ -125,19 +110,21 @@ int main()
 {
   // Dimension of matrices / Dimensions des matrices
   int N = 8; 
-  // Block size for the task-parallel blocked potrf code / Taille de bloc pour potrf parallele par bloc a base de taches
-  int BS = 4;  
   // Matrices
   std::vector<double> L(N * N), A(N * N), B(N * N);
   // Vectors
   std::vector<double> x(N), b(N), b2(N);
 
+  // Initialize b
+  // Initializer b
+  for (int i = 0; i < N; i++) { b[i] = i; }
+
   // Generate a lower-triangular N x N matrix L with random values between 0.0 and 1.0
   // Generer une matrice triangulaire inferieure L de taille N x N avec valeurs aleatoires entre 0.0 et 1.0
   // TODO / A FAIRE
 
-  // Generate a symmetric positive definite matrix A = L * L^T using the dsyrk function (BLAS3)
-  // Generer une matrice symmetrique positive definite A = L * L^T avec la fonction dsyrk (BLAS3)
+  // Generate a symmetric positive definite matrix A = L * L^T using the dgemm function (BLAS3)
+  // Generer une matrice symmetrique positive definite A = L * L^T avec la fonction dgemm (BLAS3)
   // TODO / A FAIRE
 
   // printMatrix(&A[0], N, N);
